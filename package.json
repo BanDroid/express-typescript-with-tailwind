@@ -1,0 +1,34 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "NODE_ENV=production node dist/app.js",
+    "dev": "nodemon src/app.ts --ext ts,ejs,json & npx tailwindcss -i ./src/public/css/tailwind.css -o ./src/public/css/index.css --watch",
+    "build": "tsc -p . && cp -r src/public dist/public &&  cp -r src/views dist && rm dist/public/css/tailwind.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/connect-livereload": "^0.6.0",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/livereload": "^0.9.2",
+    "@types/node": "^20.1.3",
+    "autoprefixer": "^10.4.14",
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.9.3",
+    "nodemon": "^2.0.22",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}
