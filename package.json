@@ -6,7 +6,7 @@
   "scripts": {
     "start": "NODE_ENV=production node dist/app.js",
     "dev": "nodemon src/app.ts --ext ts,ejs,json & npx tailwindcss -i ./src/public/css/tailwind.css -o ./src/public/css/index.css --watch",
-    "build": "tsc -p . && cp -r src/public dist &&  cp -r src/views dist && rm dist/public/css/tailwind.css"
+    "build": "tsc -p . && npx tailwindcss -i ./src/public/css/tailwind.css -o ./src/public/css/index.css --minify && cp -r src/public dist &&  cp -r src/views dist && rm dist/public/css/tailwind.css"
   },
   "keywords": [],
   "author": "",
